@@ -18,8 +18,8 @@ import java.util.List;
 @Controller
 public class HandController {
 
-    @Autowired
-    private dbconnect dbconnecthand;
+//    @Autowired
+//    private dbconnect dbconnecthand;
 
 //    @PostMapping("/")
 //    public ModelAndView login2(@RequestParam (required=false) String userid, @RequestParam (required=false) String password, HttpSession session) {
@@ -57,11 +57,7 @@ public class HandController {
     @GetMapping("/")
     public ModelAndView index(){
 
-        List<HandMessage> handlistan = dbconnecthand.getHandMessages();
 
-        for(int i=0;i<handlistan.size();i++){
-            System.out.println(handlistan.get(i).getName());
-        }
 
         ModelAndView modelmodel = new ModelAndView("index");
         return modelmodel;
@@ -87,9 +83,7 @@ public class HandController {
     public Hand hand(HandMessage message) throws Exception {
         //dbconnecthand.addHand(message);
         handObject.addContent(message.getName());
-        for(int i=0;i<handObject.getContent().size();i++){
-            System.out.println("Nummer " + i + " " + handObject.getContent().get(i).toString());
-        }
+
 
         return handObject;
     }
@@ -98,9 +92,10 @@ public class HandController {
     @SendTo("/topic/message/room")
     public Hand handDelete(HandMessage message) throws Exception {
         int away = Integer.parseInt(message.getName().substring(3));
+        System.out.println("värde " + handObject.getContent().get(away));
         System.out.println("tabort " + away);
-
-        handObject.getContent().remove(away);
+        
+        handObject.getContent().set(away, "");
 
 
 

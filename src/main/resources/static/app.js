@@ -31,7 +31,7 @@ function disconnect() {
     setConnected(false);
     console.log("Disconnected");
 }
-var counter = 1;
+var counter = -1;
 function sendName() {
     counter++;
     stompClient.send("/app/hello", {}, JSON.stringify({'name': '<tr><td>' + $("#name").val() + '</td><td>' + $("#message").val() + '</td><td>' + $("#room").val() + '</td><td>' + '<button id="btn' + counter + '" onclick="getParent(this)">Remove</button>' + '</td></tr>'}));
