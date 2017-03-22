@@ -16,11 +16,15 @@
 
             if (knappText == "Remove") {
                 $("#greetings").children().remove();
-                $("#greetings").append(message + "<button onclick='getParent(this)'>" + knappText + "</button>")
+                $("#greetings").append(message);
+
             }
             else {
                 $("#greetings").children().remove();
-                $("#greetings").append(message)
+                var $message = $(message).not('button');
+                $("#greetings").append(message);
+                $(".removeBtn").css("display","none");
+                $(".removeBtn").remove();
             }
         }
 

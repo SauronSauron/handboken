@@ -77,15 +77,24 @@ public class HandController {
     }
 
     Hand handObject = new Hand();
-
+    int counter = 0;
     @MessageMapping("/hello")
     @SendTo("/topic/message/room")
     public Hand hand(HandMessage message) throws Exception {
         //dbconnecthand.addHand(message);
-        handObject.addContent(message.getName());
+        if (message.getName().equals("hej")){
+            counter++;
+            String snothing = "";
+            handObject.addContent(snothing);
+            return handObject;
+        } else {
+        String s = message.getName();
+        s = s + "<button class=\"removeBtn\" id=\"btn" + counter + "\" onclick=\"getParent(this)\">Remove</button></td></tr>'";
+        counter++;
+        handObject.addContent(s);
 
 
-        return handObject;
+        return handObject;}
     }
 
     @MessageMapping("/delete")
@@ -94,7 +103,7 @@ public class HandController {
         int away = Integer.parseInt(message.getName().substring(3));
         System.out.println("värde " + handObject.getContent().get(away));
         System.out.println("tabort " + away);
-        
+
         handObject.getContent().set(away, "");
 
 

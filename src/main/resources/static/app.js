@@ -12,17 +12,18 @@ function setConnected(connected) {
     $("#greetings").html("");
 }
 
-function connect() {
-    var socket = new SockJS('/gs-guide-websocket');
-    stompClient = Stomp.over(socket);
-    stompClient.connect({}, function (frame) {
-        setConnected(true);
-        console.log('Connected: ' + frame);
-        stompClient.subscribe('/topic/message/room', function (greeting) {
-            showHands(JSON.parse(greeting.body).content);
-        });
-    });
-}
+// function connect() {
+//     var socket = new SockJS('/gs-guide-websocket');
+//     stompClient = Stomp.over(socket);
+//     stompClient.connect({}, function (frame) {
+//         setConnected(true);
+//         console.log('Connected: ' + frame);
+//         stompClient.subscribe('/topic/message/room', function (greeting) {
+//             showHands(JSON.parse(greeting.body).content);
+//         });
+//     });
+//     stompClient.send("/app/hello", {}, JSON.stringify({'name': ''}));
+// }
 
 function disconnect() {
     if (stompClient != null) {
@@ -31,14 +32,13 @@ function disconnect() {
     setConnected(false);
     console.log("Disconnected");
 }
-var counter = -1;
+
 function sendName() {
-    counter++;
-    stompClient.send("/app/hello", {}, JSON.stringify({'name': '<tr><td>' + $("#name").val() + '</td><td>' + $("#message").val() + '</td><td>' + $("#room").val() + '</td><td>' + '<button id="btn' + counter + '" onclick="getParent(this)">Remove</button>' + '</td></tr>'}));
+
+    stompClient.send("/app/hello", {}, JSON.stringify({'name': '<tr><td>' + $("#name").val() + '</td><td>' + $("#message").val() + '</td><td>' + $("#room").val() + '</td><td>'}));
 
     //console.log("texten" + JSON.stringify({'name': $("#name").val(), 'message': $("#message").val()}));
 }
-
 
 
 function getParent(elem) {
@@ -51,8 +51,28 @@ $(function () {
     $("form").on('submit', function (e) {
         e.preventDefault();
     });
-    $( "#connect" ).click(function() { connect(); });
-    $( "#disconnect" ).click(function() { disconnect(); });
-    $( "#send" ).click(function() { sendName(); });
+    $("#connect").click(function () {
+        connect();
+    });
+    $("#disconnect").click(function () {
+        disconnect();
+    });
+    $("#send").click(function () {
+        sendName();
+    });
+});
+
+$(document).ready(function () {
+    var socket = new SockJS('/gs-guide-websocket');
+    stompClient = Stomp.over(socket);
+    stompClient.connect({}, function (frame) {
+        setConnected(true);
+        console.log('Connected: ' + frame);
+        stompClient.subscribe('/topic/message/room', function (greeting) {
+            showHands(JSON.parse(greeting.body).content);
+        });
+        stompClient.send("/app/hello", {}, JSON.stringify({'name': "hej"}));
+    });
+
 });
 
