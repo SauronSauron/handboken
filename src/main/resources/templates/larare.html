@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<h1>Inloggning handboken</h1>
+<h2 th:text="${wrong}"></h2>
+<form action="#" th:action="@{/larare}" th:object="${user}" method="post">
+    <p>Message: <input type="text" th:field="*{username}" /></p>
+    <p>Message: <input type="text" th:field="*{password}" /></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    <p th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></p>
+</form>
+
+</body>
+</html>

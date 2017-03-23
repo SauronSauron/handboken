@@ -4,10 +4,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,63 +24,43 @@ import java.util.List;
 @Controller
 public class HandController {
 
-//    @Autowired
-//    private dbconnect dbconnecthand;
-
-//    @PostMapping("/")
-//    public ModelAndView login2(@RequestParam (required=false) String userid, @RequestParam (required=false) String password, HttpSession session) {
-//
-//        if(userid.equals("test") && password.equals("pass")) {
-//
-//            session.setAttribute("user", userid);
-//            return new ModelAndView("secret");
-//
-//        }
-//
-//        return new ModelAndView("login");
-//
-//    }
-//
-//
-//
-//    @GetMapping("/secret")
-//    public ModelAndView secret(HttpSession session) {
-//
-//        if(session.getAttribute("user") != null) {
-//
-//            return new ModelAndView("secret");
-//
-//        }
-//
-//        else {
-//
-//            return new ModelAndView("login");
-//
-//        }
-//
-//    }
-
-    @GetMapping("/")
-    public ModelAndView index(){
-
-
-
-        ModelAndView modelmodel = new ModelAndView("index");
-        return modelmodel;
-    }
 
     @GetMapping("/larare")
-    public ModelAndView larare() throws Exception {
-        String w = "Remove";
-        ModelAndView modelmodel = new ModelAndView("index");
-        return modelmodel.addObject("knappen", w);
+    public ModelAndView larare2() {
+        String w = "Enter password";
+        User user = new User("", "");
+        return new ModelAndView("larare").addObject("user", user).addObject("wrong,w");
     }
 
-    @GetMapping("/test")
-    public ModelAndView index2() throws Exception {
-        ModelAndView modelmodel = new ModelAndView("index");
-        return modelmodel;
+    @PostMapping("/larare")
+    public ModelAndView larare(@Valid User user, BindingResult bindingResult, HttpSession session) {
+        if (bindingResult.hasErrors()) {
+            return new ModelAndView("larare");
+        }
+        else if (user.getUsername().equalsIgnoreCase("test") && user.getPassword().equalsIgnoreCase("pass")) {
+            session.setAttribute("user", user);
+            System.out.println("sessionSTART");
+            return new ModelAndView("redirect:/");
+        } else {
+            String w = "wrong password";
+            return new ModelAndView("larare").addObject("wrong", w);
+        }
+
     }
+
+    @GetMapping("/")
+    public ModelAndView index(HttpSession session){
+        if (session.getAttribute("user") != null) {
+            System.out.println("inloggadyey");
+            String removeBtn = "Remove";
+            ModelAndView modelmodel = new ModelAndView("index");
+            return modelmodel.addObject("knappen", removeBtn);
+        }
+        else {
+            return new ModelAndView("index");
+        }
+    }
+
 
     Hand handObject = new Hand();
     int counter = 0;
