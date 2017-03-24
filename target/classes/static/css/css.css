@@ -38,6 +38,10 @@ span.fa.fa-hand-stop-o {
   text-shadow: 1px 1px 0px #444444;
 }
 
+#greetings tr td:nth-child(1) {
+    font-weight: bold;
+}
+
 button#send {
   background-color: #319ef5;
   color: white;
@@ -67,8 +71,19 @@ button#send {
 
 @media (max-width: 492px) {
   h1 { font-size: 50px;}
+  #greetings tr td:nth-child(2) {
+      display: none;
+  }
 }
 
 @media (max-width: 436px) {
   h1 { font-size: 40px;}
+}
+
+@media (max-width: 378px) {
+  h1 { font-size: 33px;}
+}
+
+@media (max-width: 333px) {
+  h1 { font-size: 27px;}
 }
