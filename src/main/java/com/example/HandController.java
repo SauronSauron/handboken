@@ -79,7 +79,7 @@ public class HandController {
 
             dbconnecthand.addHand(message);
             String s = "";
-            s = s + "<tr><td>" + message.getName() + "</td><td>" + message.getMessage() + "</td><td>" + message.getRoom() + " </td><td><button class=\"removeBtn\" id=\"btn" + counter + "\" onclick=\"getParent(this)\">Remove</button></td></tr>'";
+            s = s + "<tr><td>" + message.getName() + "</td><td id='1'>" + message.getMessage() + "</td><td id='2'>" + message.getRoom() + " </td><td><button class=\"removeBtn\" id=\"btn" + counter + "\" onclick=\"getParent(this)\">Remove</button></td></tr>'";
             counter++;
             handObject.addContent(s);
             return handObject;

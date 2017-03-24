@@ -24,9 +24,14 @@
         function showHands(message) {
             var knappText = [[${knappen}]];
 
-            if (knappText == "Remove") {
-                $("#greetings").children().remove();
-                $("#greetings").append(message);
+            //if (knappText == "Remove") {
+               // $("#greetings").children().remove();
+               // $("#greetings").append(message);
+
+                if (knappText == "Remove") {
+
+                    $("#greetings").children().remove();
+                    $("#greetings").append(message);
 
             }
             else {
