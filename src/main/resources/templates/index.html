@@ -26,7 +26,7 @@
 
             if (knappText == "Remove") {
                 $("#greetings").children().remove();
-                console.log("meddeladne " + message);
+                console.log("meddelande " + message);
                 $("#greetings").append(message);
 
             }
@@ -34,6 +34,7 @@
                 $("#greetings").children().remove();
                 var $message = $(message).not('button');
                 $("#greetings").append(message);
+                console.log("meddelande " + message);
                 $(".removeBtn").css("display","none");
                 $(".removeBtn").remove();
             }

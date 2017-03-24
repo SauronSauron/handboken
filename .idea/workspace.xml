@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4572a76-0dd6-4fa2-81a8-cdd533fe3bc3" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/HandController.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/HandController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/dbconnect.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/dbconnect.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -28,11 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="29" column="36" lean-forward="false" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+            <state relative-caret-position="235">
+              <caret line="32" column="18" lean-forward="true" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
               <folding>
                 <element signature="n#style#0;n#h2#0;n#noscript#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -43,21 +46,23 @@
       <file leaf-file-name="dbconnect.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/dbconnect.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state relative-caret-position="383">
+              <caret line="84" column="5" lean-forward="false" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
               <folding>
-                <marker date="1490185254178" expanded="true" signature="1086:1154" ph="insert into hands... " />
-                <marker date="1490185254178" expanded="true" signature="1650:1688" ph="SELECT name,... hands" />
+                <marker date="1490345576326" expanded="true" signature="1086:1154" ph="insert into hands... " />
+                <marker date="1490345576326" expanded="true" signature="1650:1688" ph="SELECT name,... hands" />
+                <marker date="1490345576326" expanded="true" signature="2351:2393" ph="UPDATE hands... " />
+                <marker date="1490345576326" expanded="true" signature="2755:2802" ph="SELECT top 1... hands" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HandController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HandController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/HandController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="83" column="37" lean-forward="true" selection-start-line="83" selection-start-column="37" selection-end-line="83" selection-end-column="37" />
+            <state relative-caret-position="455">
+              <caret line="102" column="1" lean-forward="false" selection-start-line="102" selection-start-column="1" selection-end-line="102" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -154,8 +159,9 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/login.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/larare.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/app.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/HandController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/dbconnect.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/HandController.java" />
       </list>
     </option>
   </component>
@@ -783,12 +789,12 @@
       <workItem from="1490185573695" duration="3647000" />
       <workItem from="1490189280572" duration="5047000" />
       <workItem from="1490256832342" duration="3034000" />
-      <workItem from="1490260136844" duration="14138000" />
+      <workItem from="1490260136844" duration="14886000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25866000" />
+    <option name="totallyTimeSpent" value="26614000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="1" width="1918" height="1078" extended-state="0" />
@@ -874,8 +880,10 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1490185254178" expanded="true" signature="1086:1154" ph="insert into hands... " />
-            <marker date="1490185254178" expanded="true" signature="1650:1688" ph="SELECT name,... hands" />
+            <marker date="1490345576326" expanded="true" signature="1086:1154" ph="insert into hands... " />
+            <marker date="1490345576326" expanded="true" signature="1650:1688" ph="SELECT name,... hands" />
+            <marker date="1490345576326" expanded="true" signature="2351:2393" ph="UPDATE hands... " />
+            <marker date="1490345576326" expanded="true" signature="2755:2802" ph="SELECT top 1... hands" />
           </folding>
         </state>
       </provider>
@@ -962,8 +970,10 @@
         <state relative-caret-position="242">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
-            <marker date="1490185254178" expanded="true" signature="1086:1154" ph="insert into hands... " />
-            <marker date="1490185254178" expanded="true" signature="1650:1688" ph="SELECT name,... hands" />
+            <marker date="1490345576326" expanded="true" signature="1086:1154" ph="insert into hands... " />
+            <marker date="1490345576326" expanded="true" signature="1650:1688" ph="SELECT name,... hands" />
+            <marker date="1490345576326" expanded="true" signature="2351:2393" ph="UPDATE hands... " />
+            <marker date="1490345576326" expanded="true" signature="2755:2802" ph="SELECT top 1... hands" />
           </folding>
         </state>
       </provider>
@@ -1167,17 +1177,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/dbconnect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <marker date="1490185254178" expanded="true" signature="1086:1154" ph="insert into hands... " />
-            <marker date="1490185254178" expanded="true" signature="1650:1688" ph="SELECT name,... hands" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/HandMessage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1100">
@@ -1226,14 +1225,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/HandController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="83" column="37" lean-forward="true" selection-start-line="83" selection-start-column="37" selection-end-line="83" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/larare.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -1244,11 +1235,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="29" column="36" lean-forward="false" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+        <state relative-caret-position="235">
+          <caret line="32" column="18" lean-forward="true" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
           <folding>
             <element signature="n#style#0;n#h2#0;n#noscript#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/dbconnect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="84" column="5" lean-forward="false" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
+          <folding>
+            <marker date="1490345576326" expanded="true" signature="1086:1154" ph="insert into hands... " />
+            <marker date="1490345576326" expanded="true" signature="1650:1688" ph="SELECT name,... hands" />
+            <marker date="1490345576326" expanded="true" signature="2351:2393" ph="UPDATE hands... " />
+            <marker date="1490345576326" expanded="true" signature="2755:2802" ph="SELECT top 1... hands" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/HandController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="102" column="1" lean-forward="false" selection-start-line="102" selection-start-column="1" selection-end-line="102" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
